@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using TrivialMazeAPI.Areas.HelpPage.ModelDescriptions;
-using TrivialMazeAPI.Areas.HelpPage.Models;
+using APITrivialMaze.Areas.HelpPage.ModelDescriptions;
+using APITrivialMaze.Areas.HelpPage.Models;
 
-namespace TrivialMazeAPI.Areas.HelpPage.Controllers
+namespace APITrivialMaze.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

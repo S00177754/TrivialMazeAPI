@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using TrivialMazeAPI.Areas.HelpPage.ModelDescriptions;
+using APITrivialMaze.Areas.HelpPage.ModelDescriptions;
 
-namespace TrivialMazeAPI.Areas.HelpPage.Models
+namespace APITrivialMaze.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

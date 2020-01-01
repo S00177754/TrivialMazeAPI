@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace TrivialMazeAPI.Areas.HelpPage
+namespace APITrivialMaze.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

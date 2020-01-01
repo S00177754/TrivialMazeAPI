@@ -1,20 +1,21 @@
-namespace TrivialMazeAPI.Migrations
+namespace APITrivialMaze.Migrations
 {
+    using APITrivialMaze.Models;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using TrivialMazeAPI.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<TrivialMazeAPI.Models.TrivialMazeAPIContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<APITrivialMaze.Data.APITrivialMazeContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            ContextKey = "APITrivialMaze.Data.APITrivialMazeContext";
         }
 
-        protected override void Seed(TrivialMazeAPI.Models.TrivialMazeAPIContext context)
+        protected override void Seed(APITrivialMaze.Data.APITrivialMazeContext context)
         {
             List<TriviaQuestion> Questions = new List<TriviaQuestion>()
            {

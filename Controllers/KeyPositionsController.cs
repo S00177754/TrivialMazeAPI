@@ -8,13 +8,14 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using TrivialMazeAPI.Models;
+using APITrivialMaze.Data;
+using APITrivialMaze.Models;
 
-namespace TrivialMazeAPI.Controllers
+namespace APITrivialMaze.Controllers
 {
     public class KeyPositionsController : ApiController
     {
-        private TrivialMazeAPIContext db = new TrivialMazeAPIContext();
+        private APITrivialMazeContext db = new APITrivialMazeContext();
 
         // GET: api/KeyPositions
         public IQueryable<KeyPosition> GetKeyPositions()
@@ -35,6 +36,41 @@ namespace TrivialMazeAPI.Controllers
             return Ok(keyPosition);
         }
 
+        // PUT: api/KeyPositions/5
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutKeyPosition(int id, KeyPosition keyPosition)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != keyPosition.ID)
+            {
+                return BadRequest();
+            }
+
+            db.Entry(keyPosition).State = EntityState.Modified;
+
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!KeyPositionExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
         // POST: api/KeyPositions
         [ResponseType(typeof(KeyPosition))]
         public IHttpActionResult PostKeyPosition(KeyPosition keyPosition)
@@ -48,6 +84,22 @@ namespace TrivialMazeAPI.Controllers
             db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = keyPosition.ID }, keyPosition);
+        }
+
+        // DELETE: api/KeyPositions/5
+        [ResponseType(typeof(KeyPosition))]
+        public IHttpActionResult DeleteKeyPosition(int id)
+        {
+            KeyPosition keyPosition = db.KeyPositions.Find(id);
+            if (keyPosition == null)
+            {
+                return NotFound();
+            }
+
+            db.KeyPositions.Remove(keyPosition);
+            db.SaveChanges();
+
+            return Ok(keyPosition);
         }
 
         protected override void Dispose(bool disposing)

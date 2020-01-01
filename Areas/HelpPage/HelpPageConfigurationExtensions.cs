@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using TrivialMazeAPI.Areas.HelpPage.ModelDescriptions;
-using TrivialMazeAPI.Areas.HelpPage.Models;
+using APITrivialMaze.Areas.HelpPage.ModelDescriptions;
+using APITrivialMaze.Areas.HelpPage.Models;
 
-namespace TrivialMazeAPI.Areas.HelpPage
+namespace APITrivialMaze.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

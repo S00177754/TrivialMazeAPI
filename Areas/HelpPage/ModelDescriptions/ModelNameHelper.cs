@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace TrivialMazeAPI.Areas.HelpPage.ModelDescriptions
+namespace APITrivialMaze.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

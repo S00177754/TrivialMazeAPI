@@ -1,6 +1,6 @@
 using System;
 
-namespace TrivialMazeAPI.Areas.HelpPage.ModelDescriptions
+namespace APITrivialMaze.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {

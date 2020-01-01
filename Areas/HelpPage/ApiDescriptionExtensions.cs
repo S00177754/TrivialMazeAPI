@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace TrivialMazeAPI.Areas.HelpPage
+namespace APITrivialMaze.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

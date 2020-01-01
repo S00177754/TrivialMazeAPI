@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TrivialMazeAPI.Controllers
+namespace APITrivialMaze.Controllers
 {
     public class HomeController : Controller
     {

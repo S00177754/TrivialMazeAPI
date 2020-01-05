@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APITrivialMaze.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -19,10 +20,12 @@ namespace APITrivialMaze.Data
         {
         }
 
-        public System.Data.Entity.DbSet<APITrivialMaze.Models.KeyPosition> KeyPositions { get; set; }
+        public DbSet<KeyPosition> KeyPositions { get; set; }
 
-        public System.Data.Entity.DbSet<APITrivialMaze.Models.TimeScore> TimeScores { get; set; }
+        public DbSet<TimeScore> TimeScores { get; set; }
 
-        public System.Data.Entity.DbSet<APITrivialMaze.Models.TriviaQuestion> TriviaQuestions { get; set; }
+        public DbSet<TriviaQuestion> TriviaQuestions { get; set; }
+
+        public DbSet<Player> Players { get; set; }
     }
 }

@@ -13,6 +13,7 @@ namespace APITrivialMaze.Migrations
         {
             AutomaticMigrationsEnabled = true;
             ContextKey = "APITrivialMaze.Data.APITrivialMazeContext";
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(APITrivialMaze.Data.APITrivialMazeContext context)
@@ -73,28 +74,28 @@ namespace APITrivialMaze.Migrations
                 context.TriviaQuestions.AddOrUpdate(x => x.Question, item);
             }
 
-            List<TimeScore> Times = new List<TimeScore>()
-            {
-                new TimeScore()
-                {
-                    Username = "Cl0UD_St1f3",
-                    Time = 100
-                },
-                new TimeScore()
-                {
-                    Username = "NanoPulse",
-                    Time = 300
-                },
-                new TimeScore()
-                {
-                    Username = "SamCroft",
-                    Time = 200
-                },
-            };
-            foreach (var item in Times)
-            {
-                context.TimeScores.AddOrUpdate(item);
-            }
+            //List<TimeScore> Times = new List<TimeScore>()
+            //{
+            //    new TimeScore()
+            //    {
+            //        Username = "Cl0UD_St1f3",
+            //        Time = 100
+            //    },
+            //    new TimeScore()
+            //    {
+            //        Username = "NanoPulse",
+            //        Time = 300
+            //    },
+            //    new TimeScore()
+            //    {
+            //        Username = "SamCroft",
+            //        Time = 200
+            //    },
+            //};
+            //foreach (var item in Times)
+            //{
+            //    context.TimeScores.AddOrUpdate(item);
+            //}
 
 
             context.SaveChanges();

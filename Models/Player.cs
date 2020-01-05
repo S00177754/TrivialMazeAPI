@@ -11,10 +11,14 @@ namespace APITrivialMaze.Models
         [Key]
         public Guid PlayerID { get; set; }
 
+        [Required]
+        [MaxLength(25),MinLength(2)]
         public string Username { get; set; }
 
+        [Required]
         public string Password { get; set; }
 
+        public virtual ICollection<Message> SentMessages { get; set; }
         public virtual ICollection<TimeScore> TimeScores { get; set; }
     }
 }

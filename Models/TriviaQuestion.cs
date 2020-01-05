@@ -10,8 +10,13 @@ namespace APITrivialMaze.Models
     {
         [Key]
         public int ID { get; set; }
+
+        [Required]
         public string Question { get; set; }
+
+        [Required]
         public string Answer { get; set; }
+
         public string FakeAnswerOne { get; set; }
         public string FakeAnswerTwo { get; set; }
         public string FakeAnswerThree { get; set; }

@@ -27,5 +27,7 @@ namespace APITrivialMaze.Data
         public DbSet<TriviaQuestion> TriviaQuestions { get; set; }
 
         public DbSet<Player> Players { get; set; }
+
+        public DbSet<Message> Messages { get; set; }
     }
 }

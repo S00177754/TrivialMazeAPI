@@ -176,6 +176,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\KeyPosition.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\TimeScore.cs" />
     <Compile Include="Models\TriviaQuestion.cs" />

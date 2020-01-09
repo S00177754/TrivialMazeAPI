@@ -12,7 +12,7 @@ namespace APITrivialMaze.Models
         [Key]
         public int ID { get; set; }
 
-        public Guid PlayerID { get; set; }
+        public string PlayerUsername { get; set; }
 
         [Required]
         public string MessageText { get; set; }
@@ -21,7 +21,7 @@ namespace APITrivialMaze.Models
         public DateTime DateSent { get; set; }
 
         //Navigation Properties
-        [ForeignKey("PlayerID")]
+        [ForeignKey("PlayerUsername")]
         public virtual Player Player { get; set; }
     }
 }

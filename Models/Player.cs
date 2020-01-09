@@ -6,11 +6,10 @@ using System.Web;
 
 namespace APITrivialMaze.Models
 {
+    [Serializable]
     public class Player
     {
         [Key]
-        public Guid PlayerID { get; set; }
-
         [Required]
         [MaxLength(25),MinLength(2)]
         public string Username { get; set; }

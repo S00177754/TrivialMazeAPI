@@ -12,9 +12,9 @@ namespace APITrivialMaze.Models
         [Key]
         public int ID { get; set; }
         public double Time { get; set; }
-        public Guid PlayerID { get; set; }
+        public string PlayerUsername { get; set; }
 
-        [ForeignKey("PlayerID")]
+        [ForeignKey("PlayerUsername")]
         public virtual Player Player { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -17,7 +18,9 @@ namespace APITrivialMaze.Models
         [Required]
         public string Password { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Message> SentMessages { get; set; }
+        [JsonIgnore]
         public virtual ICollection<TimeScore> TimeScores { get; set; }
     }
 }

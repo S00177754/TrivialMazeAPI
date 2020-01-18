@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,7 @@ namespace APITrivialMaze.Models
         public double Time { get; set; }
         public string PlayerUsername { get; set; }
 
+        [JsonIgnore]
         [ForeignKey("PlayerUsername")]
         public virtual Player Player { get; set; }
     }
